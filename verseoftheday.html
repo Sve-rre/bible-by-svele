@@ -2,7 +2,7 @@
 <h1>Verse of the day</h1>
 <h2 id="h2"></h2>
 <p id="paragraph"></p>
-
+<button id="button">Select day</button>
 <script>
 
 let verse = []
@@ -10,11 +10,19 @@ verse.push("Romans 8:1")
 
 
 let list = []
-list.push("There is therefore now no condemnation for those who are in Christ Jesus")
+list.push("There is therefore now no condemnation for those who are in Christ Jesus.")
 
 let h2 = document.getElementById("h2")
 let paragraph = document.getElementById("paragraph")
 h2.textContent = verse[verse.length-1]
 paragraph.textContent = list[list.length-1]
+
+let day = list.length
+let button = document.getElementById("button")
+button.onclick = function(){
+  day = prompt("Select a day 1-"+ list.length)
+  h2.textContent = verse[day-1]
+  paragraph.textContent = list[day-1]
+}
   
 </script>
