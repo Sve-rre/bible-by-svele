@@ -1,0 +1,20 @@
+<title>Verse of the day</title>
+<h1>Verse of the day</h1>
+<h2 id="h2"></h2>
+<p id="paragraph"></p>
+
+<script>
+
+let verse = []
+verse.push("Romans 8:1")
+
+
+let list = []
+list.push("There is therefore now no condemnation for those who are in Christ Jesus")
+
+let h2 = document.getElementById("h2")
+let paragraph = document.getElementById("paragraph")
+h2.textContent = verse[verse.length-1]
+paragraph.textContent = list[list.length-1]
+  
+</script>
