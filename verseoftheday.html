@@ -4,9 +4,6 @@ If there is a day that you missed, just press this button under to select the da
 <button id="button">Select day</button>
 <h3 id="h2"></h3>
 <p id="paragraph"></p>
-
-<h4>For info about todays verse:</h4>
-In more detail about repentance, check out this R3alism video : <a href="https://michael.team/yt/?yt=https://www.youtube.com/watch?v=wh-E0lV5pJs">click here</a>. This shows what repentance is really about, not just asking for forgiveness and not changing.
 <script>
 
 let verse = []
@@ -18,6 +15,9 @@ let list = []
 list.push("There is therefore now no condemnation for those who are in Christ Jesus.")
 list.push("Repent, then, and turn to God, so that your sins may be wiped out, that times of refreshing may come from the Lord")
 
+let info=[]
+info.push("What does being in Christ mean? <a href="https://www.bible.com/bible/111/2CO.5.17.NIV">Corinthians 5:17</a> says that after following Jesus we will be a new person.")
+info.push("In more detail about repentance, check out this R3alism video : <a href="https://michael.team/yt/?yt=https://www.youtube.com/watch?v=wh-E0lV5pJs">click here</a>. This shows what repentance is really about, not just asking for forgiveness and not changing.")
 
 let h2 = document.getElementById("h2")
 let paragraph = document.getElementById("paragraph")
@@ -31,7 +31,7 @@ button.onclick = function(){
   h2.textContent = verse[day-1]
   paragraph.textContent = list[day-1]
   something.innerHTML = `
-    yo <a href="chatgpt.com">link</a>
+    info[day-1]
 `;
 
 document.body.appendChild(something);
@@ -40,7 +40,7 @@ document.body.appendChild(something);
 let something = document.createElement("div");
 
 something.innerHTML = `
-    Hello! Press <button>button</button> for something cool!
+    info[info.length-1]
 `;
 
 document.body.appendChild(something);
