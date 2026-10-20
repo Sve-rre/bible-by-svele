@@ -30,6 +30,19 @@ button.onclick = function(){
   day = prompt("Select a day 1-"+ list.length)
   h2.textContent = verse[day-1]
   paragraph.textContent = list[day-1]
+  something.innerHTML = `
+    yo <a href="chatgpt.com">link</a>
+`;
+
+document.body.appendChild(something);
 }
-  
+
+let something = document.createElement("div");
+
+something.innerHTML = `
+    Hello! Press <button>button</button> for something cool!
+`;
+
+document.body.appendChild(something);
+
 </script>
